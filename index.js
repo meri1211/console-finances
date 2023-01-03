@@ -108,10 +108,23 @@ for (let i = 0; i < finances.length; i++) {
 }
 console.log("Total:" + " " + "$" + total);
 
+//We need to find the average of the **changes** in Profit/Losses over the entire period.
+// In order for us to find the average, we first have to find the total of the differences and then divide that by the number of elements in the array.
+let totalDifferences= 0;
 
+let monthlyAmount;
+for (let i = 0; i < finances.length; i++) {
+  const[date, monthlyAmount] = finances[i];
+  console.log(monthlyAmount);
+}
 
+monthlyAmount= [];
+//let totalDifferences;
 
-
+for (let i = 1; i < monthlyAmount.length; i++) {
+  totalDifferences = monthlyAmount[i]- monthlyAmount[i - 1];
+  console.log(totalDifferences);
+}
 
 
 
