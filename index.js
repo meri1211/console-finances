@@ -94,7 +94,19 @@ console.log(title)
 //We can use array.length to find out how many items/ months there are in the array.
 let totalMonths
 totalMonths= finances.length
-console.log(totalMonths)
+console.log("Total Months:"+ " " + totalMonths)
+
+// We need to find the sum/ total of the included months
+// I am declaring and initializing the total variable to 0.
+
+let total= 0
+
+// Using a for-loop to iterate over the array and add each month's profit to the total.
+
+for (let i = 0; i < finances.length; i++) {
+  total += finances[i][1];
+}
+console.log("Total:" + " " + "$" + total);
 
 
 
